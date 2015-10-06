@@ -1,0 +1,11 @@
+<p> HTML for status updates here </p>
+
+{% if next_five_prints %}
+<ul>
+	{% for listObject in next_five_prints %}
+	<li><a href="/list/{{ listObject.id }}/">{{ listObject.uniqueID }}</a></li>
+	{% endfor %}
+</ul>
+{% else %}
+<p>No prints are available.</p>
+{% endif %}

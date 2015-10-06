@@ -1,0 +1,126 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+  <title>MakerLab 3D Printing</title>
+  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+		  
+		  
+		  
+		<!--  <script type="text/javascript">
+			  document.getElementById('submit_button').addEventListener("click", upload_success);
+			  
+			  function upload_success()
+			  {
+				  alert("Upload Success")
+			  }
+		  </script>
+			-->
+
+
+		  <link rel="stylesheet" href="/static/bootstrap/dist/css/bootstrap.css">
+			  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+			  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	</head>
+	<body style="background-color: #ECDFBD;">
+		
+		
+		
+		
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" >
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">Maker Lab</a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse" >
+					<ul class="nav navbar-nav">
+						<li><a href="/maker/home/">Home</a></li>
+						<li class="active"><a href="/maker/about_tools/">Tools</a></li>
+						<li><a href="/maker/about_curriculum/">Curriculum</a></li>
+						<li><a href="/maker/about_staff/">Staff</a></li>
+						<li><a href="/maker/watch/">Watch</a></li>
+						
+						
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tips <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="/maker/tips_3D/">3D Printer</a></li>
+								<li><a href="/maker/tips_laser/">Laser Cutter</a></li>
+							</ul>
+						</li>
+						
+						
+						
+					</ul>
+					
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="/maker/upload/">Upload</a></li>
+						<li><a href="/maker/contact/">Contact Us</a></li>
+					</ul>				</div><!--/.nav-collapse -->
+			</div><!--/.container-fluid -->
+		</nav>
+		
+		
+		
+		<div class="container">
+			<div class="row" style="padding-bottom: 20px">
+				<div class="col-md-4">
+					<img class="img-responsive" src="/static/3D_Printer.png" alt="Chania" width="640" height="480">
+						</div>
+				
+				<div class="col-md-8">
+					3D Printers- The new talk of the town, what everyone wants to know about. In our mobile lab we have hobby class printers made by MakerBot. These lovely machines give an entry level degree of experience and hands on feeling of what is going on in the industry. The 3D deposition printing technology is an easy way to ease into what these incredible machines are and what they can do.
+					
+				</div>
+			</div>
+			
+			<div class="row" style="padding-bottom: 20px">
+				
+				
+				<div class="col-md-8">
+					Laser Cutter- Computer controlled laser cutters, plasma cutters and water jets have quickly all become standard practice in making quick and accurate cuts through various materials. In our lab we have a CO2 laser that is capable of engraving and cutting through thin plastics and woods, perfect for showing what is possible using these incredible machines.
+					
+				</div>
+				
+				<div class="col-md-4">
+					<img class="img-responsive" src="/static/Laser_Cutter.png" alt="Chania" width="640" height="480">
+						</div>
+			</div>
+			
+			<div class="row" style="padding-bottom: 20px">
+				<div class="col-md-4">
+					<img class="img-responsive" src="/static/Table_Router.png" alt="Chania" width="640" height="480">
+						</div>
+				
+				<div class="col-md-8">
+					Table Router- Wood carving has never been easier since computer-numerically-controlled (CNC) table routers. The CarveWright table router allows for user friendly computer design of projects. It can perform precise cutting, drilling, machine, and shaping of wood. Perfect for a decorative sign for around the house.
+					
+				</div>
+			</div>
+			
+			<div class="row" style="padding-bottom: 20px">
+				
+				
+				<div class="col-md-8">
+					Vinyl Plotter- This is what the sign making industry runs off of. Although our machine was originally designed for the scrapbooking community, we have taken advantage of the capabilities of the Silhouette Cameo plotter for creating custom paper craft and vinyl stickers. The vinyl plotter is ideal for adding to the aesthetics of many projects and can be used for making stickers, t-shirts and stencils.
+				</div>
+				
+				<div class="col-md-4">
+					<img class="img-responsive" src="/static/Vinyl_Plotter.png" alt="Chania" width="640" height="480">
+						</div>
+			</div>
+		</div>
+		
+		
+
+		
+</body>
+</html>

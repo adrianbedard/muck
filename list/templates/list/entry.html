@@ -1,0 +1,34 @@
+<p> HTML for filling out form here </p>
+<!-- <form>
+	Name: <br>
+	<input type = "text" name = "name">
+	<br>
+	
+	School: <br>
+	<input type = "text" name = "school">
+	<br>
+	
+	Data: <br>
+	<input type = "text" name = "data">
+	<br><br>
+	
+	
+	
+</form>
+
+
+<li><a href="{% url 'confirm' %}"> {{"Confirm"}} </a> </li> -->
+
+<form action="/list/get_name/" method="post">
+	{% csrf_token %}
+	<label for="ownerName">Your name: </label>
+	<input id="ownerName" type="text" name="ownerName" value="{{ current_name }}">
+	
+	<label for="dropOffLocation">Your school: </label>
+	<input id="dropOffLocation" type="text" name="dropOffLocation" value="{{ current_school }}">
+		
+	<label for="data">Your file: </label>
+	<input id="data" type="text" name="data" value="{{ current_file }}">
+		
+	<input type="submit" value="OK">
+</form>

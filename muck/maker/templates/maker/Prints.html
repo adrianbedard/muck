@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+  <title>MakerLab 3D Printing</title>
+  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+		  
+		  
+		  
+		<!--  <script type="text/javascript">
+			  document.getElementById('submit_button').addEventListener("click", upload_success);
+			  
+			  function upload_success()
+			  {
+				  alert("Upload Success")
+			  }
+		  </script>
+			-->
+
+
+		  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+			  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+			  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		
+		
+		
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">Maker Lab</a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="/myapp/list/">Home</a></li>
+						<li class="active"><a href="#">Prints</a></li>
+						<li><a href="/myapp/upload/">Upload</a></li>
+						<li><a href="/admin/">Admin</a></li>
+						
+					</ul>
+					
+				</div><!--/.nav-collapse -->
+			</div><!--/.container-fluid -->
+		</nav>
+				<div class="row" style="padding-left: 30px">
+					<div class="col-sm-3" style="background-color:rgba(84, 0, 23, 0.0); padding-left: 25px;">
+						
+						<h2>
+						Upcoming Prints:
+						</h2>
+						<br>
+						{% if infos %}
+						<ul>
+							{% for document in infos %}
+							{% if document.timeLapse %}
+							{% else %}
+							<li><a href="/myapp/{{ document.id }}/">{{ document.ownerName }}</a></li>
+							{% endif %}
+							{% endfor %}
+						</ul>
+						{% else %}
+						<p>No documents.</p>
+						{% endif %}
+					</div>
+					
+					<div class="col-sm-3" style="background-color:rgba(84, 0, 23, 0.0); padding-left: 25px; padding top: 10px">
+						
+						<h2>
+						Finished Prints:
+						</h2>
+						<br>
+						{% if infos %}
+						<ul>
+							{% for document in infos %}
+							{% if document.timeLapse %}
+							<li><a href="/myapp/{{ document.id }}/">{{ document.ownerName }}</a></li>
+							{% endif %}
+							{% endfor %}
+						</ul>
+						{% else %}
+						<p>No documents.</p>
+						{% endif %}
+					</div>
+				</div>
+				
+			</div><!--/.container-fluid -->
+		
+</body>
+</html>

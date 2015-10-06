@@ -1,0 +1,131 @@
+{% load staticfiles %}
+
+
+<!-- <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" /> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+  <title>MakerLab 3D Printing</title>
+  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+		  
+		  
+		  
+		<!--  <script type="text/javascript">
+			  document.getElementById('submit_button').addEventListener("click", upload_success);
+			  
+			  function upload_success()
+			  {
+				  alert("Upload Success")
+			  }
+		  </script>
+			-->
+
+
+		  <link rel="stylesheet" href="/static/bootstrap/dist/css/bootstrap.css">
+			  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+			  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	</head>
+	<body style="background-color: #ECDFBD;">
+		
+		
+		
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" >
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">Maker Lab</a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse" >
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="/maker/home/">Home</a></li>
+						<li><a href="/maker/about_tools/">Tools</a></li>
+						<li><a href="/maker/about_curriculum/">Curriculum</a></li>
+						<li><a href="/maker/about_staff/">Staff</a></li>
+						<li><a href="/maker/watch/">Watch</a></li>
+
+						
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tips <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="/maker/tips_3D/">3D Printer</a></li>
+								<li><a href="/maker/tips_laser/">Laser Cutter</a></li>
+							</ul>
+						</li>
+						
+						
+						
+					</ul>
+					
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="/maker/upload/">Upload</a></li>
+						<li><a href="/maker/contact/">Contact Us</a></li>
+					</ul>				</div><!--/.nav-collapse -->
+			</div><!--/.container-fluid -->
+		</nav>
+		
+		
+
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<img class="img-responsive" src="/static/SCULogo.png" alt="Chania" width="640" height="480">
+						</div>
+		
+				<div class="col-md-8">
+					The Mobile Maker Lab is a trailer that was designed and is run by Santa Clara University students filled with hobby class equipment to inspire making. The main purpose of the Mobile Maker Lab is to go to local schools and introduce students to equipment, tools, and thought processes used by engineers so they can see what they can create with a little work and the right environment. As a group we have years and years of creating and building projects in our free time and most of us have made our life around engineering.
+					<br>
+					<br>
+					Most of us started at a young age getting our hands dirty and creating. At first, we did not fully understanding what we were doing, but slowly with the help of others our knowledge expanded and now we want to help share and teach others about our passion.
+
+					
+				</div>
+			</div>
+		</div>
+	
+	
+		<div class="row" style="padding-left: 30px; padding-top: 30px">
+					<div class="col-sm-8" style="background-color:rgba(84, 0, 23, 0.0); padding-left: 25px;">
+						
+						Thanks to our sponsors... 
+					
+					</div>
+					
+					<div class="col-sm-4" style="background-color:rgba(84, 0, 23, 0.0); padding-left: 25px; padding top: 10px">
+						
+						
+						<h2>
+							Upcoming Prints:
+						</h2>
+						<br>
+						{% if infos %}
+						<ul>
+							{% for document in infos %}
+							{% if document.PrintCompleted = checked %}
+							<li><a href="/maker/{{ document.id }}/">{{ document.ownerName }}</a></li>
+							{% endif %}
+							{% endfor %}
+						</ul>
+						{% else %}
+						<p>No documents.</p>
+						{% endif %}
+
+					</div>
+				</div>
+		
+		
+		
+		
+		
+			</div><!--/.container-fluid -->
+		
+</body>
+</html>
